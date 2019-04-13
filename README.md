@@ -1,4 +1,4 @@
-# Odyssey Hackathon - Morpheus Proposal Engine
+# Giveth Team 2 - Momentum Voting integrated
 
 ## Setup guide
 
