@@ -50,6 +50,7 @@ class Me extends Component {
 
       let localt = 0; // local time ( = age of current conviction amount - reset every time conviction stake is changed.)
       let stakeIndex = 0;
+     
 
       for (let t = 0; t < this.state.globalparams.totaltime; t++) {
         // get timeline events for this CV
@@ -76,7 +77,7 @@ class Me extends Component {
             desc: `${user.name} changes stake to ${action.tokensstaked}`
           });
         }
-
+       
         localt++;
       }
 
@@ -92,12 +93,22 @@ class Me extends Component {
     // add a dataset with the total conviction
     let totalconvictiondata = [];
     let triggervals = [];
+    let passed = false;
     for (let t = 0; t < this.state.globalparams.totaltime; t++) {
       let total = datasets.reduce((accumulator, currentValue) => {
         return accumulator + currentValue.data[t];
       }, 0);
       totalconvictiondata.push(total);
       triggervals.push(this.props.treshold);
+
+      if (total > this.state.treshold && !passed){
+        passed=true;
+        stakeHistory.push({
+          t: t,
+          desc: `Proposal approved!`
+        });
+      }
+     
     }
     datasets.push({
       label: "trigger value",
@@ -126,35 +137,14 @@ class Me extends Component {
   render() {
     const timeline = this.state.timeline.map((item, i) => {
       return (
-        <li key={i}>
-          {item.t} : {item.desc}
-        </li>
+        <div key={i}>
+          {item.t}h : {item.desc}
+        </div>
       );
     });
 
     return (
       <div className="container">
-        <section className="hero is-info welcome is-small">
-          {/* <div className="hero-body"> */}
-          {/* <div className="container">
-              <h1 className="title">Proposal : {this.state.proposal.name}</h1>
-            </div> */}
-          {/* </div> */}
-          {/* Alpha= {this.state.alpha / 100}
-          <input
-            class="slider is-fullwidth is-large is-danger is-circle"
-            step="1"
-            min="0"
-            max="100"
-            value={this.state.alpha}
-            type="range"
-            onChange={e => {
-              this.setState({ alpha: e.target.value });
-              this.recalc();
-            }}
-          /> */}
-        </section>
-
         <div className="card">
           <header className="card-header">
             <p className="card-header-title">Conviction chart</p>
@@ -162,6 +152,7 @@ class Me extends Component {
           <div className="card-content">
             <div className="content">
               {this.state.plot && <Line data={this.state.plot} />}
+              <p className="card-header-title">Timeline detail</p>
               <ol>{timeline}</ol>
             </div>
           </div>
