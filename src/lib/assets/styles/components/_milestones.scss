@@ -60,6 +60,9 @@
         .subtext {
           color: #666666;
         }
+        .longtext {
+          max-width: 300px;
+        }
         .progress-text {
           display: flex;
           align-items: center;
