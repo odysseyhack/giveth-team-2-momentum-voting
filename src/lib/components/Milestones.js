@@ -3,6 +3,7 @@ import dai from "../assets/images/dai.png";
 import { changeState } from "../stores/navigation";
 import PrimaryButton from "./PrimaryButton";
 import ConvictionVoting from "./ConvictionVoting";
+import { maxHeaderSize } from "http";
 
 const globalparams = {
   alpha: 90,
@@ -22,7 +23,7 @@ const milestones = [
     subtext: "Commons: Liquid Africa",
     longtext:
       "Support 15 rural commonities in establishing sustainable water sources by installing rainwater collectors.",
-    currentValue: 12000,
+    currentValue: 15000,
     maxValue: 15000,
     treshold: 100000
   },
@@ -128,7 +129,9 @@ const Milestones = () => (
                 />
               </td>
               <td>
-                <PrimaryButton name="Donate xDAI" showDai />
+                {currentValue < maxValue && (
+                  <PrimaryButton name="Donate xDAI" showDai />
+                )}
               </td>
             </tr>
           </>
