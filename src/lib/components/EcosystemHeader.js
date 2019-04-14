@@ -1,7 +1,7 @@
-import React from 'react'
-import EcosystemDaiAction from './EcosystemDaiAction'
-import EcosystemNavbar from './EcosystemNavbar'
-import Givethers from './Givethers'
+import React from "react";
+import EcosystemDaiAction from "./EcosystemDaiAction";
+import EcosystemNavbar from "./EcosystemNavbar";
+import Givethers from "./Givethers";
 
 const EcosystemHeader = ({ title, subtitle, description, image }) => {
   return (
@@ -9,7 +9,7 @@ const EcosystemHeader = ({ title, subtitle, description, image }) => {
       <EcosystemNavbar />
       <div
         className="eco-header"
-        style={{ background: `url(${image})`, backgroundSize: 'cover' }}
+        style={{ background: `url(${image})`, backgroundSize: "cover" }}
       >
         <div className="eco-header-content">
           <h3>{subtitle}</h3>
@@ -34,7 +34,7 @@ const EcosystemHeader = ({ title, subtitle, description, image }) => {
         </div> */}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default EcosystemHeader
+export default EcosystemHeader;

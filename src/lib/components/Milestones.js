@@ -106,6 +106,7 @@ const Milestones = () => (
                 <p className="title">{title}</p>
                 <p className="subtext">{subtext}</p>
                 <p className="longtext">{longtext}</p>
+                <PrimaryButton name="Voting weight 25000" />
               </td>
               <td>
                 <div className="progress-text">
