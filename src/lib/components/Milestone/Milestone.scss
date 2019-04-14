@@ -10,7 +10,7 @@
   margin-bottom: 1rem;
   margin-top: 2rem;
 
-  button:first-child {
+  button:not(last-child) {
     margin-right: 2rem;
   }
 }
@@ -109,26 +109,5 @@
 
   .little-info {
     font-size: 10px;
-  }
-}
-
-.milestone-donations {
-  .table {
-    display: table;
-    width: 100%;
-
-    > div:first-child {
-      display: table-row;
-      font-weight: bold;
-      border-bottom: 1px solid black;
-    }
-
-    .row {
-      display: table-row;
-    }
-
-    .cell {
-      display: table-cell;
-    }
   }
 }
