@@ -24,7 +24,7 @@ const milestones = [
       "Support 15 rural commonities in establishing sustainable water sources by installing rainwater collectors.",
     currentValue: 12000,
     maxValue: 15000,
-    treshold: 300000
+    treshold: 100000
   },
   {
     title: "Milestone: Protect Water Resource from pollution",
