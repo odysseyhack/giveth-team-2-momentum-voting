@@ -133,6 +133,9 @@ const Milestones = () => (
                 {currentValue < maxValue && (
                   <PrimaryButton name="Donate xDAI" showDai />
                 )}
+                 {currentValue >= maxValue && (
+                  <PrimaryButton name="Request Payout"/>
+                )}
               </td>
             </tr>
           </>
