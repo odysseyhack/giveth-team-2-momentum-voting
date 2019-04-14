@@ -53,6 +53,10 @@
       td {
         padding: 1rem 2rem;
 
+        .milestone-title {
+          max-width: 300px;
+        }
+
         .title {
           color: #3a6467;
           font-size: 16px;

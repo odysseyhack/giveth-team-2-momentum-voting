@@ -18,13 +18,13 @@ const around = (offset, range) => {
 
 const milestones = [
   {
-    title: "Milestone: Protect Water Resource from pollution",
-    subtext: "Commons: Philadelphia area",
+    title: "Milestone: Rainwater Collectors for Namibia",
+    subtext: "Commons: Liquid Africa",
     longtext:
-      "Aqua array detects increasing concentration of unwanted substance 09A. Bad actor is autofactory 01a. Proposal is shutdown, further investigation, maintenance and resolution of error.",
-    currentValue: 5000,
-    maxValue: 5000,
-    treshold: 80000
+      "Support 15 rural commonities in establishing sustainable water sources by installing rainwater collectors.",
+    currentValue: 12000,
+    maxValue: 15000,
+    treshold: 300000
   },
   {
     title: "Milestone: Protect Water Resource from pollution",
@@ -85,7 +85,7 @@ const Milestones = () => (
 
     <table>
       <tr>
-        <td>Name</td>
+        <td className="milestone-title">Name</td>
         <td>Funding Progress</td>
         <td>Actions</td>
       </tr>

@@ -51,7 +51,7 @@ const campaigns = [
 export default () => (
   <div>
     <EcosystemHeader
-      title="Scaling Wildlife Protection"
+      title="Water protection"
       subtitle="COMMONS"
       description="This is a description... Trying to make it long hello there!"
       image={headerImage}

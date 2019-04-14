@@ -1,6 +1,6 @@
-import React from 'react'
-import giveth from '../assets/images/giveth-logo.svg'
-import profile from '../assets/images/profile.png'
+import React from "react";
+import giveth from "../assets/images/giveth-logo.svg";
+import profile from "../assets/images/profile.png";
 
 const EcosystemNavbar = () => {
   return (
@@ -10,7 +10,7 @@ const EcosystemNavbar = () => {
       </div>
       <div className="commons-dropdown">
         <p>Commons:</p>
-        <p className="selected">Reforestation Indonesia</p>
+        <p className="selected">Water Preservation</p>
       </div>
       <div className="nav-content">
         <p>Campaigns</p>
@@ -25,11 +25,11 @@ const EcosystemNavbar = () => {
         <img src={profile} />
       </div>
     </div>
-  )
-}
+  );
+};
 
 EcosystemNavbar.propTypes = {
   // buttonName:
-}
+};
 
-export default EcosystemNavbar
+export default EcosystemNavbar;

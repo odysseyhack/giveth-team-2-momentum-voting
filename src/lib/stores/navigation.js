@@ -1,5 +1,6 @@
-import { Store } from 'laco'
+import { Store } from "laco";
 
-export const NavStore = new Store({ state: 'commons' })
+export const NavStore = new Store({ state: "campaign" });
 
-export const changeState = newState => NavStore.set(() => ({ state: newState }))
+export const changeState = newState =>
+  NavStore.set(() => ({ state: newState }));
