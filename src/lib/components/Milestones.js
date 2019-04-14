@@ -19,15 +19,6 @@ const around = (offset, range) => {
 
 const milestones = [
   {
-    title: "Milestone: Rainwater Collectors for Namibia",
-    subtext: "Commons: Liquid Africa",
-    longtext:
-      "Support 15 rural commonities in establishing sustainable water sources by installing rainwater collectors.",
-    currentValue: 15000,
-    maxValue: 15000,
-    treshold: 100000
-  },
-  {
     title: "Milestone: Protect Water Resource from pollution",
     subtext: "Commons: Philadelphia area",
     longtext:
@@ -35,6 +26,15 @@ const milestones = [
     currentValue: 2000,
     maxValue: 5000,
     treshold: 150000
+  },
+  {
+    title: "Milestone: Rainwater Collectors for Namibia",
+    subtext: "Commons: Liquid Africa",
+    longtext:
+      "Support 15 rural commonities in establishing sustainable water sources by installing rainwater collectors.",
+    currentValue: 15000,
+    maxValue: 15000,
+    treshold: 100000
   }
 ].map((milestone, i) => {
   return {
@@ -106,7 +106,7 @@ const Milestones = () => (
                 <p className="title">{title}</p>
                 <p className="subtext">{subtext}</p>
                 <p className="longtext">{longtext}</p>
-                <PrimaryButton name="Voting weight 25000" />
+                {/* <PrimaryButton name="Voting weight 25000" /> */}
               </td>
               <td>
                 <div className="progress-text">
@@ -131,7 +131,12 @@ const Milestones = () => (
               </td>
               <td>
                 {currentValue < maxValue && (
-                  <PrimaryButton name="Donate xDAI" showDai />
+                  <>
+                  <PrimaryButton name="Add 2300 conviction"  />
+                  <p className="subtext">to pass the proposal in 12h</p>
+                  <PrimaryButton name="Donate 3000 xDai" showDai />
+                  <p className="subtext">to pass the proposal right now</p>
+                  </>
                 )}
                  {currentValue >= maxValue && (
                   <PrimaryButton name="Request Payout"/>
